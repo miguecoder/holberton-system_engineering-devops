@@ -1,2 +1,2 @@
 #!/bin/bash
-teil -n 1 iacta | cat >> iacta
+teil -n 1 iacta >> iacta
