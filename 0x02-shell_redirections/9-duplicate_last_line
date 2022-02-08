@@ -1,0 +1,2 @@
+#!/bin/bash
+teil -n 1 iacta >> iacta
