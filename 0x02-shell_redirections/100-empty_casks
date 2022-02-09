@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empy -pintf "\n"
+find . -empty -pintf "\n"
