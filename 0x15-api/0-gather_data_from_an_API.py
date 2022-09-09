@@ -21,8 +21,5 @@ if __name__ == "__main__":
           .format(name.get("name"),
                   num_task_c, num_task))
 
-    for dic in task_completed:
-        for key in dic:
-            if key == "title":
-                value = dic[key]
-                print(f"\t {value}")
+    for task in task_completed:
+        print("\t {}".format(task.get("title")))
