@@ -21,8 +21,8 @@ if __name__ == "__main__":
     task_completed = requests.get(all_url, params=filter).json()
     num_task_c = len(task_completed)
 
-    print("Employee {} is done with tasks({}/{})\
-        :".format(name.get("name"), num_task_c, num_task))
+    print("Employee {} is done with tasks({}/{}):".format(name.get("name"),
+          num_task_c, num_task))
 
     for dic in task_completed:
         for key in dic:
