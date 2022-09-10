@@ -12,13 +12,13 @@ if __name__ == "__main__":
     tasks = requests.get(all_url, params={"userId": id}).json()
     num_task = len(tasks)
 
-    name = requests.get(user_url + id).json()
+    name = requests.get(user_url + id).json().get("name")
     filter = {"userId": id, "completed": "true"}
     task_completed = requests.get(all_url, params=filter).json()
     num_task_c = len(task_completed)
 
     print("Employee {} is done with tasks({}/{}):"
-          .format(name.get("name"),
+          .format(name,
                   num_task_c, num_task))
 
     for task in task_completed:
