@@ -12,8 +12,6 @@ if __name__ == "__main__":
 
     tasks = requests.get(all_url, params={"userId": id}).json()
     name = requests.get(user_url + id).json().get("username")
-    filter = {"userId": id, "completed": "true"}
-    task_completed = requests.get(all_url, params=filter).json()
 
     with open(id + '.json', 'w') as outfile:
         json.dump({id: [{"task": tt.get("title"), "completed": tt.get(
